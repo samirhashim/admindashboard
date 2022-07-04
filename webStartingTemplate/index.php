@@ -45,54 +45,68 @@
 	</div>
 	<div class="main-content">
 		<div class="container-fluid">
-			<div class="row pt-3">
+			<div class="row pt-5">
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
-						<span>students</span>
-					</div>
-					<div class="card-body">
-						<table class="table table-striped table-hover table-responsive">
-							<thead>
-								<tr>
-									<th>No.</th>
-									<th>Full name</th>
-									<th>Phone number</th>
-									<th>Email</th>
-									<th>Gender</th>
-									<th>Courses</th>
-								    <th>Enrolled on</th>
-									<th>Action</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1.</td>
-									<td>Yusufhashim</td>
-									<td>+254723457242</td>
-									<td>yusufhahim@gmail.com</td>
-									<td>male</td>
-									<td>web design</td>
-									<td>23 june 2022</td>
-									<td>
-										<a href="#" class="btn btn-primary btn-sm">
-										<i class="fa fa-edit"></i>
-										</a>
-										<a href="#" class="btn btn-info btn-sm">
-											<i class="fa fa-eye"></i>
-										</a>
-										<a href="#" class="btn btn-danger btn-sm">
-											<i class="fa fa-trash"></i>
-										</a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+						<span>Top Content</span>
 					</div>
 				</div>
+			</div>
+			<div class="row pt-3">
+				<div class="col-lg-3">
+					<div class="card-header bg-dark text-white text-center">
+					  <span>students</span>
+					</div>
+				 <div class="card-body ">
+						<span><i class="fa fa-group fa-3x"></i> </span>
+						<span class="float-right">00</span>
+					</div>
+					<div class="card-footer"></div>
+				
+			</div>
+				<div class="col-lg-3 ">
+					<div class="card-header bg-dark text-white text-center">
+						<span>Available courses</span>
+						 </div>
+									
+					<div class="card-body">
+						<span><i class="fa fa-folder-open fa-3x"></i> </span>
+						<span class="float-right">00</span>
+					</div>
+					<div class="card-footer"></div>
+				</div>
+														
+				<div class="col-lg-3 ">
+					<div class="card-header bg-dark text-white text-center">
+					  <span>Campus</span>
+					</div>
+					  <div class="card-body">
+						<span><i class="fa fa-graduation-cap fa-3x"></i> </span>
+						<span class="float-right">00</span>
+					</div>
+					<div class="card-footer"></div>
+				</div>
+				<div class="col-lg-3 ">
+					<div class="card-header bg-dark text-white text-center">
+					  <span>users</span>
+						
 			
-			
+			</div>
+			<div class="card-body">
+				<span><i class="fa fa-graduation-cap fa-3x"></i> </span>
+				<span class="float-right">00</span>
+			</div>
+			<div class="card-footer"></div>
 		</div>
+			<div class="col-lg-12">
+				<div class="card-header bg-dark text-white text-center">
+					<span>Student Analysis</span>
+				</div>
+			</div>
+		</div>
+		
 	</div>
+	
 	
 <script src="jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
