@@ -1,10 +1,5 @@
 <?php
-$server ="localhost";
-$username ="root";
-$password ="";
-$database ="web2";
-
-$conn = mysqli_connect($server,$username,$password,$database);
+require_once('logics/dbconnection.php');
 $sqlquery =mysqli_query($conn,"SELECT * FROM students");
 
 //echo $fetchrecords['fullname'].''.$fetchrecords['email'];

@@ -1,57 +1,17 @@
 <?php
-$server ="localhost";
-$username ="root";
-$password ="";
-$database ="web2";
-
-$conn = mysqli_connect($server,$username,$password,$database);
+require_once('logics/dbconnection.php');
 $sqlquery =mysqli_query($conn,"SELECT * FROM students");
 
 
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Bootstrap Admin Template</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Creating admin dashboard">
-	<meta name="keywords" content="HTML,CSS,Zalego,Technology,Zalego institute,JavaScript">
-	<meta name="author" content="Your name">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="style.css">
-</head>
+<?php require_once('includes/headers.php')?>
 <body>
 	<!-- All our code. write here   -->
-	<div class="header">
-		<img src="images/zalegoimage.png" alt="zalego"height="50"width="50px"class="rounded-circle">
-		<a href="#"class="navbar-trigger"><span></span></a>
-
-	</div>
+	<?php require_once('includes/navbar.php')?>
 	<div class="sidebar">
-		<nav>
-			<ul>
-				<li>
-					<a href="students.html">
-						<span> <i class="fa fa-group"></i></span>
-						<span>students</span>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<span> <i class="fa fa-folder-open"></i></span>
-						<span>Courses</span>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<span> <i class="fa fa-graduation-cap"></i></span>
-						<span>Campus</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
+	<?php require_once('includes/sidebar.php')?>
 
 	</div>
 	<div class="main-content">
@@ -80,8 +40,17 @@ $sqlquery =mysqli_query($conn,"SELECT * FROM students");
 									<tr>
 										<td><?php echo $fetchrecords['id']?></td>
 										<td><?php echo $fetchrecords['fullname']?></td>
-										<td><?php echo $fetchrecords['email']?></td>
 										<td><?php echo $fetchrecords['phonenumber']?></td>
+										<td><?php echo $fetchrecords['Email']?></td>
+										<td><?php echo $fetchrecords['Gender']?></td>
+										<td><?php echo $fetchrecords['courses']?></td>
+										<td><?php echo $fetchrecords['enrolled on']?></td>
+										<td><?php echo $fetchrecords['action']?></td>
+										<td>
+											<a href="">Edit</a>
+											<a href="">View</a>
+											<a href="">Delete</a>
+										</td>
 										
 									</tr>
 
@@ -96,27 +65,6 @@ $sqlquery =mysqli_query($conn,"SELECT * FROM students");
 		</div>
 	</div>
 	
-<script src="jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<?php require_once('includes/scripts.php')?>
 </body>
 </html>
-<tr>
-									<td>1.</td>
-									<td>Yusufhashim</td>
-									<td>+254723457242</td>
-									<td>yusufhahim@gmail.com</td>
-									<td>male</td>
-									<td>web design</td>
-									<td>23 june 2022</td>
-									<td>
-										<a href="#" class="btn btn-primary btn-sm">
-										<i class="fa fa-edit"></i>
-										</a>
-										<a href="#" class="btn btn-info btn-sm">
-											<i class="fa fa-eye"></i>
-										</a>
-										<a href="#" class="btn btn-danger btn-sm">
-											<i class="fa fa-trash"></i>
-										</a>
-									</td>
-								</tr>
