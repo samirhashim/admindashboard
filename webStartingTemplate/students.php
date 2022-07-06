@@ -41,15 +41,16 @@ $sqlquery =mysqli_query($conn,"SELECT * FROM students");
 										<td><?php echo $fetchrecords['id']?></td>
 										<td><?php echo $fetchrecords['fullname']?></td>
 										<td><?php echo $fetchrecords['phonenumber']?></td>
-										<td><?php echo $fetchrecords['Email']?></td>
-										<td><?php echo $fetchrecords['Gender']?></td>
+										<td><?php echo $fetchrecords['email']?></td>
+										<td><?php echo $fetchrecords['gender']?></td>
 										<td><?php echo $fetchrecords['courses']?></td>
 										<td><?php echo $fetchrecords['enrolled on']?></td>
 										<td><?php echo $fetchrecords['action']?></td>
 										<td>
-											<a href="">Edit</a>
-											<a href="">View</a>
-											<a href="">Delete</a>
+											<a href="edit-enrollment.php?id=<?php echo $fetchrecords['id']?>" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+											<a href="" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+											<a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+											
 										</td>
 										
 									</tr>
