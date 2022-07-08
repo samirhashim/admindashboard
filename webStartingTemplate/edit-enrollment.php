@@ -8,6 +8,28 @@ while($fetchuser = mysqli_fetch_array($queryuser))
 	$phonenumber = $fetchuser['phonenumber'];
 	$email = $fetchuser['email'];
 }
+//update user records
+if(isset($_POST['updateRecords']))
+{
+    //fetch form data
+    $name =$_POST['fullname'];
+    $phonenumber = $_POST['phonenumber'];
+    $emailaddress =$_POST['email'];
+    $formgender =$_POST['gender'];
+    $formcourse =$_POST['course'];
+    
+    //update records
+    $updatequery = mysqli_query($conn, "UPDATE students SET fullname='$name',phonenumber='$phonenumber',email='$emailaddress',gender='$formgender',course='$formcourse' WHERE id='".$_GET['id']."' ");
+    if($updatequery)
+    {
+        echo "Data update";
+    }
+    else
+    {
+        echo "Error occured"
+    }
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +51,7 @@ while($fetchuser = mysqli_fetch_array($queryuser))
                             <h4>Edit student: </h4>
                         </div>
 						<div class="card-body">
-						<form action="enroll.php" method="POST">
+						<form action="edit-enrollment.php" method="POST">
                     <div class="row">
                         <div class="mb-3 col-lg-6 col-md-6 col-sm-12">
                             <label for="fullname" class="form-label">Full name</label>
@@ -46,7 +68,7 @@ while($fetchuser = mysqli_fetch_array($queryuser))
                             <input type="email" class="form-control" name="email"value="<?php $email?>" placeholder="Please enter your email">
                         </div>
                         <div class="mb-3 col-lg-6 col-md-6 col-sm-12">
-                            <label for="gender" class="form-label">What's your gender</label>
+                            <label for="gender" class="form-label">gender</label>
                             <select name="gender" class="form-control" aria-label="default select example">
                                 <option >--Select your gender--</option>
                                 <option value="Male">Male</option>
@@ -71,7 +93,7 @@ while($fetchuser = mysqli_fetch_array($queryuser))
                         </label>
                         </div>
                     </div>           
-                 <button type="submit" name="enroll" class="btn btn-outline-primary">Update Records</button>
+                 <button type="submit" name="updateRecords" class="btn btn-outline-primary">Update Records</button>
             </div>
         </form>
 		    </div>
