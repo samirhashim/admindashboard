@@ -1,10 +1,12 @@
 <?php
+$message="";
 require_once('logics/dbconnection.php');
-$queryuser = mysqli_query($conn, "SELECT * FROM students WHERE id='".$_GET['id']."'");
+$queryuser = mysqli_query($conn, "SELECT * FROM students WHERE id='".$_GET['id']."' ");
 
 while($fetchuser = mysqli_fetch_array($queryuser))
 {
-	$fullname = $fetchuser['fullname'];
+	$id =$fetchuser['id'];
+    $fullname = $fetchuser['fullname'];
 	$phonenumber = $fetchuser['phonenumber'];
 	$email = $fetchuser['email'];
 }
@@ -22,11 +24,11 @@ if(isset($_POST['updateRecords']))
     $updatequery = mysqli_query($conn, "UPDATE students SET fullname='$name',phonenumber='$phonenumber',email='$emailaddress',gender='$formgender',course='$formcourse' WHERE id='".$_GET['id']."' ");
     if($updatequery)
     {
-        echo "Data update";
+        $messaeg= "Data updated";
     }
     else
     {
-        echo "Error occured"
+       $message ="Error occured";
     }
 
 }
@@ -51,7 +53,7 @@ if(isset($_POST['updateRecords']))
                             <h4>Edit student: </h4>
                         </div>
 						<div class="card-body">
-						<form action="edit-enrollment.php" method="POST">
+						<form action="edit-enrollment.php?id=<?php echo $id ?>" method="POST">
                     <div class="row">
                         <div class="mb-3 col-lg-6 col-md-6 col-sm-12">
                             <label for="fullname" class="form-label">Full name</label>
