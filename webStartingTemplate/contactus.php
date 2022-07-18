@@ -32,6 +32,7 @@ $sqlquery =mysqli_query($conn,"SELECT * FROM contactus");
 									<th>email</th>
 									<th>message</th>
 									<th>created_at</th>
+									<th>actions</th>
 								    
 								</tr>
 							</thead>
