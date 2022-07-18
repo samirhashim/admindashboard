@@ -38,7 +38,7 @@ $countAllstudents= mysqli_num_rows($queryAllstudents);
 					</div>
 				 <div class="card-body ">
 						<span><i class="fa fa-group fa-3x"></i> </span>
-						<span class="float-right badge badge-dark"></span>
+						<span class="float-right badge badge-dark">40</span>
 					</div>
 					<div class="card-footer"></div>
 				
@@ -50,7 +50,7 @@ $countAllstudents= mysqli_num_rows($queryAllstudents);
 									
 					<div class="card-body">
 						<span><i class="fa fa-folder-open fa-3x"></i> </span>
-						<span class="float-right badge badge-dark"></span>
+						<span class="float-right badge badge-dark">30</span>
 					</div>
 					<div class="card-footer"></div>
 				</div>
@@ -81,6 +81,9 @@ $countAllstudents= mysqli_num_rows($queryAllstudents);
 				<div class="card-header bg-dark text-white text-center">
 					<span>Student Analysis</span>
 				</div>
+				<div class="card-body">
+				<span><i class="fa fa-line-chart fa-3x"></i> </span>
+				<span class="float-right">00</span>
 			</div>
 		</div>
 		

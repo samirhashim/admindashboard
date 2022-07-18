@@ -18,6 +18,12 @@
 					</a>
 				</li>
 				<li>
+					<a href="contactus.php">
+						<span> <i class="fa fa-envelope"></i></span>
+						<span>messages</span>
+					</a>
+				</li>
+				<li>
 					<a href="">
 						<span> <i class="fa fa-graduation-cap"></i></span>
 						<span>Campus</span>
