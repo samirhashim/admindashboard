@@ -20,6 +20,7 @@ $sqlquery =mysqli_query($conn,"SELECT * FROM students");
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
 						<span>students</span>
+						<button href="add-enrollment.php" class="float-right btn btn-primary btn-sm">Add student</button>
 					</div>
 					<div class="card-body">
 						<table class="table table-striped table-hover table-responsive">

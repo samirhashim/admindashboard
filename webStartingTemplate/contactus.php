@@ -20,6 +20,7 @@ $sqlquery =mysqli_query($conn,"SELECT * FROM contactus");
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
 						<span>contact us</span>
+						
 					</div>
 					<div class="card-body">
 						<table class="table table-striped table-hover table-responsive">
